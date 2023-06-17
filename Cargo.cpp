@@ -17,6 +17,7 @@ Cargo::~Cargo()
 void Cargo::setProducto(Package producto_){
     producto = producto_;
 }
+
 void Cargo::setTrailer(){
     int opc;
     cout<<"Que tipo de trailer se usara: "<<endl;
@@ -40,6 +41,7 @@ void Cargo::setTrailer(){
         cout<<"- Opcion incorrecta"<<endl;
     }
 }
+
 void Cargo::setPrecio(){
     cout<<"Ingrese el precio del cargamento: "<<endl;
     fflush(stdin);
