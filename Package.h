@@ -1,33 +1,36 @@
 #ifndef PACKAGE_H
 #define PACKAGE_H
+
 #include <iostream>
 using namespace std;
 
-class Package
-{
+class Package {
     public:
-        string producto;
-        string caja;
-        string destino;
-        double peso;
+        string box;
+        string product; //basico: comida, fragiles, miscelania -- avanzado: construccion, vehiculos
+        double weight;
+        string destiny;
 
         Package();
-        virtual ~Package();
+        ~Package();
+        Package(string, string);
+        Package(string, double, string);
+        Package(string, double, string, string);
 
-        Package(string producto, double peso);
-        Package(string producto, double peso, double costo);
+        void setBox();
+        void setProduct();
+        void setWeight();
+        void setDestiny();
 
-        void setDestino();
-        void setPeso();
-        void setCosto();
+        string getBox();
+        string getProduct();
+        double getWeight();
+        string getDestiny();
 
-        string getDestino();
-        double getPeso();
-        double getCosto();
-
-    protected:
-
-    private:
+        void setData();
 };
 
-#endif // PACKAGE_H
+
+
+
+#endif //PACKAGE_H
