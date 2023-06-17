@@ -12,13 +12,12 @@ class Cargo
         string trailer;
         double precio;
 
-        void setCargo();
-        void setProducto();
+        void setProducto(Package);
         void setTrailer();
         void setPrecio();
-        void setData();
+        void setData(Package);
 
-        string getProducto();
+        Package getProducto();
         string getTrailer();
         double getPrecio();
 

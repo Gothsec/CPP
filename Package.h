@@ -9,13 +9,13 @@ class Package {
         string box;
         string product; //basico: comida, fragiles, miscelania -- avanzado: construccion, vehiculos
         double weight;
-        string destiny;
+        bool destiny; //false nacional -- true internacional
 
         Package();
         ~Package();
         Package(string, string);
         Package(string, double, string);
-        Package(string, double, string, string);
+        Package(string, double, string, bool);
 
         void setBox();
         void setProduct();
@@ -25,12 +25,8 @@ class Package {
         string getBox();
         string getProduct();
         double getWeight();
-        string getDestiny();
+        bool getDestiny();
 
-        void setData();
 };
-
-
-
 
 #endif //PACKAGE_H

@@ -14,17 +14,8 @@ Cargo::~Cargo()
     //dtor
 }
 
-void Cargo::setCargo(){
-    setProducto();
-    setTrailer();
-    setPrecio();
-
-    Cargo(getProducto(), getTrailer(), getPrecio());
-}
-
-void Cargo::setProducto(){
-    cout<<"Ingrese el tipo de producto del cargamento: "<<endl;
-    
+void Cargo::setProducto(Package producto_){
+    producto = producto_;
 }
 void Cargo::setTrailer(){
     int opc;
@@ -55,15 +46,15 @@ void Cargo::setPrecio(){
     cin>>precio;
 }
 
-void Cargo::setData(){
-    producto = "-";
+void Cargo::setData(Package producto_){
+    producto = producto_;
     trailer = "-";
     precio = 0;
 
     Cargo(producto, trailer, precio);
 }
 
-string Cargo::getProducto(){
+Package Cargo::getProducto(){
     return producto;
 }
 

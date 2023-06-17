@@ -6,8 +6,8 @@
 Package::Package() {
     box = "-";
     product = "-";
-    weight = 50;
-    destiny = "nacional";
+    weight = 0;
+    destiny = false;
 }
 
 Package::~Package() {
@@ -18,6 +18,7 @@ Package::~Package() {
 Package::Package(string box_, string product_) {
     box = box_;
     product = product_;
+    weight = 50;
 }
 
 Package::Package(string box_, double weight_, string product_) {
@@ -26,7 +27,7 @@ Package::Package(string box_, double weight_, string product_) {
     product = product_;
 }
 
-Package::Package(string box_, double weight_, string product_, string destiny_) {
+Package::Package(string box_, double weight_, string product_, bool destiny_) {
     box = box_;
     weight = weight_;
     product = product_;
@@ -54,7 +55,7 @@ void Package::setWeight() {
 void Package::setDestiny() {
     fflush(stdin);
     cout<<"Ingrese el destino: ";
-    getline(cin, destiny);
+    cin>>destiny;
 }
 
 
@@ -70,10 +71,6 @@ double Package::getWeight() {
     return weight;
 }
 
-string Package::getDestiny() {
+bool Package::getDestiny() {
     return destiny;
-}
-
-void setData() {
-    
 }
