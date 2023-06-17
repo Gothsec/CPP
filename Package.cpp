@@ -6,12 +6,12 @@
 Package::Package() {
     box = "-";
     product = "-";
-    weight = 0;
+    weight = 50;
     destiny = "nacional";
 }
 
 Package::~Package() {
-
+    //dest
 }
 
 //Overloaded Builders
@@ -26,11 +26,11 @@ Package::Package(string box_, double weight_, string product_) {
     product = product_;
 }
 
-Package::Package(string box_, double weight_, string product_, string destiny) {
+Package::Package(string box_, double weight_, string product_, string destiny_) {
     box = box_;
     weight = weight_;
     product = product_;
-    destiny = "internacional";
+    destiny = destiny_;
 }
 
 //Functions
@@ -63,13 +63,17 @@ string Package::getBox() {
 }
 
 string Package::getProduct() {
-    return 
+    return product;
 }
 
 double Package::getWeight() {
-
+    return weight;
 }
 
 string Package::getDestiny() {
+    return destiny;
+}
 
+void setData() {
+    
 }

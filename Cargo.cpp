@@ -1,9 +1,9 @@
 #include "Cargo.h"
+#include "Package.h"
 #include <iostream>
 using namespace std;
 
-Cargo::Cargo(string producto_, string trailer_, double precio_)
-{
+Cargo::Cargo(Package producto_, string trailer_, double precio_) {
     producto = producto_;
     trailer = trailer_;
     precio = precio_;
@@ -24,8 +24,7 @@ void Cargo::setCargo(){
 
 void Cargo::setProducto(){
     cout<<"Ingrese el tipo de producto del cargamento: "<<endl;
-    fflush(stdin);
-    getline(cin, producto);
+    
 }
 void Cargo::setTrailer(){
     int opc;

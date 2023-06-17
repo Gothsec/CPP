@@ -1,12 +1,14 @@
 #ifndef CARGO_H
 #define CARGO_H
+
+#include "Package.h"
 #include <iostream>
 using namespace std;
 
 class Cargo
 {
     public:
-        string producto;
+        Package producto;
         string trailer;
         double precio;
 
@@ -20,7 +22,7 @@ class Cargo
         string getTrailer();
         double getPrecio();
 
-        Cargo(string, string, double);
+        Cargo(Package, string, double);
         virtual ~Cargo();
 
     protected:
