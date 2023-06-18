@@ -5,7 +5,7 @@
 #include "Package.h"
 using namespace std;
 
-vector<Cargo> cargos; 
+vector<Cargo> cargos;
 
 //prototipos
 void showDefault();
@@ -20,11 +20,10 @@ void credits();
 void showDefault() {
     Cargo obj;
     Package obj_p;
-    cout<<"Constructor por defecto"<<endl;
-    cout<<"trailer"<<endl;
+    cout<<"==== Constructor por defecto ===="<<endl;
     cout<<"Trailer: "<<obj.getTrailer()<<endl;
     cout<<"Precio: "<<obj.getPrecio()<<endl;
-    cout<<"producto"<<endl;
+    cout<<"---- Producto ----"<<endl;
     cout<<"Embalaje: "<<obj_p.getBox()<<endl;
     cout<<"Material: "<<obj_p.getProduct()<<endl;
     cout<<"Peso: "<<obj_p.getWeight()<<endl;
@@ -118,10 +117,9 @@ void defaultArguments() {
 void listadoGeneral() {
     cout<<"===== Listado ====="<<endl;
     for (size_t i = 0; i < cargos.size(); i++) {
-        cout<<"trailer"<<endl;
         cout<<"Trailer: "<<cargos[i].getTrailer()<<endl;
         cout<<"Precio: "<<cargos[i].getPrecio()<<endl;
-        cout<<"producto"<<endl;
+        cout<<"----- Producto -----"<<endl;
         cout<<"Embalaje: "<<cargos[i].getProducto().getBox()<<endl;
         cout<<"Material: "<<cargos[i].getProducto().getProduct()<<endl;
         cout<<"Peso: "<<cargos[i].getProducto().getWeight()<<endl;
