@@ -15,47 +15,56 @@ Package::~Package() {
 }
 
 //Overloaded Builders
-Package::Package(string box_, string product_) {
+void Package::setPackage(string box_) {
     box = box_;
-    product = product_;
-    weight = 50;
+    weight = 100;
 }
 
-Package::Package(string box_, double weight_, string product_) {
+void Package::setPackage(string box_, double weight_) {
     box = box_;
     weight = weight_;
-    product = product_;
 }
 
-Package::Package(string box_, double weight_, string product_, bool destiny_) {
+void Package::setPackage(string box_, double weight_, bool destiny_) {
     box = box_;
     weight = weight_;
-    product = product_;
     destiny = destiny_;
 }
 
 //Functions
-void Package::setBox() {
-    fflush(stdin);
-    cout<<"Ingrese tipo de embalaje: ";
-    getline(cin, box);
-}
+string Package::setProduct(bool type) {
+    int opc;
+    cout<<"Materiales a transportar"<<endl;
+    cout<<"1. Comida"<<endl;
+    cout<<"2. Cristaleria"<<endl;
+    cout<<"3. Miscelania"<<endl;
+    if (type == true) {
+        cout<<"4. Construccion"<<endl;
+        cout<<"5. Vehiculos"<<endl;
+    }
+    cout<<"Ejila una opcion: ";
+    cin>>opc;
+    cout<<endl;
+    
+    switch (opc) {
+        case 1: product = "Comida"; break;
 
-void Package::setProduct() {
-    fflush(stdin);
-    cout<<"Ingrese el producto a llevar: ";
-    getline(cin, product);
-}
-
-void Package::setWeight() {
-    cout<<"Ingrese el peso: ";
-    cin>>weight;
-}
-
-void Package::setDestiny() {
-    fflush(stdin);
-    cout<<"Ingrese el destino: ";
-    cin>>destiny;
+        case 4:
+            if (type == true) {
+                product = "Construccion"; break;
+            } else {
+                cout<<"Opcion incorrecta"; break;
+            }
+        case 5:
+            if (type == true) {
+                product = "Vehiculos"; break;
+            } else {
+                cout<<"Opcion incorrecta"; break;
+            }
+    
+        default: cout<<"Opcion incorrecta"; break;
+    }
+    return product;
 }
 
 

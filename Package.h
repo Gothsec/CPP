@@ -13,14 +13,11 @@ class Package {
 
         Package();
         ~Package();
-        Package(string, string);
-        Package(string, double, string);
-        Package(string, double, string, bool);
+        void setPackage(string);
+        void setPackage(string, double);
+        void setPackage(string, double, bool);
 
-        void setBox();
-        void setProduct();
-        void setWeight();
-        void setDestiny();
+        string setProduct(bool);
 
         string getBox();
         string getProduct();

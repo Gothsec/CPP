@@ -15,13 +15,13 @@ class Cargo
         void setProducto(Package);
         void setTrailer();
         void setPrecio();
-        void setData(Package);
+        // void setData(Package);
 
         Package getProducto();
         string getTrailer();
         double getPrecio();
 
-        Cargo(Package, string, double);
+        Cargo();
         virtual ~Cargo();
 
     protected:

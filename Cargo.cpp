@@ -3,18 +3,16 @@
 #include <iostream>
 using namespace std;
 
-Cargo::Cargo(Package producto_, string trailer_, double precio_) {
-    producto = producto_;
-    trailer = trailer_;
-    precio = precio_;
+Cargo::Cargo() {
+    trailer = "-";
+    precio = 0;
 }
 
-Cargo::~Cargo()
-{
+Cargo::~Cargo() {
     //dtor
 }
 
-void Cargo::setProducto(Package producto_){
+void Cargo::setProducto(Package producto_) {
     producto = producto_;
 }
 
@@ -24,8 +22,7 @@ void Cargo::setTrailer(){
     cout<<"1) Trailer Box"<<endl;
     cout<<"2) Trailer Abierto"<<endl;
     cout<<"3) Trailer Frigorifico"<<endl;
-    cout<<"Opcion: "<<endl;
-    fflush(stdin);
+    cout<<"Opcion: ";
     cin>>opc;
 
     if(opc == 3){
@@ -40,21 +37,22 @@ void Cargo::setTrailer(){
     }else{
         cout<<"- Opcion incorrecta"<<endl;
     }
+    cout<<endl;
 }
 
 void Cargo::setPrecio(){
-    cout<<"Ingrese el precio del cargamento: "<<endl;
-    fflush(stdin);
+    cout<<"Ingrese el precio del cargamento: ";
     cin>>precio;
+    cout<<endl;
 }
 
-void Cargo::setData(Package producto_){
-    producto = producto_;
-    trailer = "-";
-    precio = 0;
+// void Cargo::setData(Package producto_){
+//     producto = producto_;
+//     trailer = "-";
+//     precio = 0;
 
-    Cargo(producto, trailer, precio);
-}
+    // Cargo(producto, trailer, precio);
+// }
 
 Package Cargo::getProducto(){
     return producto;
