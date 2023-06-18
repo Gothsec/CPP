@@ -1,3 +1,8 @@
+//Manuel Builes - 2264325-2724
+//Oscar Hernandez - 2264488 - 2724
+//Camilo Garcia - 2264484-2724
+//Alejandro Cuenca - 2264475-2724
+
 #ifndef PACKAGE_H
 #define PACKAGE_H
 

@@ -1,3 +1,12 @@
+//Manuel Builes - 2264325-2724
+//Oscar Hernandez - 2264488 - 2724
+//Camilo Garcia - 2264484-2724
+//Alejandro Cuenca - 2264475-2724
+//Version: 1.0
+//Ult. fecha actualizacion: 18/06/2023
+//Descripcion: Esta aplicacion permite cargas predeterminadas
+//usando la sobrecarga de funciones
+
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
@@ -73,12 +82,14 @@ void overload3() {
     int x = 0;
     double peso = 0;
     bool transporte;
-    cout<<"Creando una carga Acanzada: "<<endl;
+    cout<<"Creando una carga Avanzada: "<<endl;
     obj_p.setProduct(true);
     cout<<"digite el peso a transportar: ";
     cin>>peso;
     while (key != false) {
-        cout<<"0. viaje nacional -- 1. internacional: ";
+        cout<<"0) viaje nacional"<<endl;
+        cout<<"1) internacional"<<endl;
+        cout<<"Ingrese una opcion: ";
         cin>>x;
         if (x == 0) {
             transporte = false;
@@ -131,16 +142,16 @@ void listadoGeneral() {
 void menu() {
     int opc;
     do {
-        cout << "===== Menu =====" << endl;
-        cout << "1. Mostrar - constructor por defecto" << endl; //mostrar por defecto tiene mas sentido que adicionar por defecto: Manuel
-        cout << "2. Adicionar - constructor sobrecargado 1" << endl;
-        cout << "3. Adicionar - constructor sobrecargado 2" << endl;
-        cout << "4. Adicionar - constructor sobrecargado 3" << endl;
-        cout << "5. Adicionar - constructor con argumentos predeterminados" << endl; //La 5 y la 1 no son lo mismo?
-        cout << "6. Listar" << endl;
-        cout << "7. Acerca de..." << endl;
-        cout << "8. Salir" << endl;
-        cout << "Ingrese una opcion: ";
+        cout << "======== Menu ========" << endl;
+        cout << "1) Mostrar - constructor por defecto" << endl; //mostrar por defecto tiene mas sentido que adicionar por defecto: Manuel
+        cout << "2) Adicionar - constructor sobrecargado 1" << endl;
+        cout << "3) Adicionar - constructor sobrecargado 2" << endl;
+        cout << "4) Adicionar - constructor sobrecargado 3" << endl;
+        cout << "5) Adicionar - constructor con argumentos predeterminados" << endl; //La 5 y la 1 no son lo mismo?
+        cout << "6) Listar" << endl;
+        cout << "7) Acerca de..." << endl;
+        cout << "8) Salir" << endl;
+        cout << "- Ingrese una opcion: ";
         cin >> opc;
         cout<<endl;
 
@@ -169,11 +180,11 @@ int main() {
 }
 
 void credits() {
-    cout<<"\t.:Creditos:.\n";
-    cout<<"Autor1: Camilo Garcia    - 2264484-2724 \n";
-    cout<<"Autor2: Oscar Hernandez  - 2264488-2724 \n";
-    cout<<"Autor3: Manuel Builes    - 2264325-2724 \n";
-    cout<<"Autor4: Alejandro Cuenca - 2264475-2724 \n";
+    cout<<"===== Creditos ====="<<endl;
+    cout<<"Autor 1: Camilo Garcia    - 2264484-2724"<<endl;
+    cout<<"Autor 2: Oscar Hernandez  - 2264488-2724"<<endl;
+    cout<<"Autor 3: Manuel Builes    - 2264325-2724"<<endl;
+    cout<<"Autor 4: Alejandro Cuenca - 2264475-2724"<<endl;
     cout<<endl;
     cout<<"Version: 1";
     cout<<endl<<endl;
